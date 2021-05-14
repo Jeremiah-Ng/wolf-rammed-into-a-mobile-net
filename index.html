@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>Image Identify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div class="main_div col-sm-12">
+            <div class="btn-group">
+                <!--
+                <div id="disappear">
+                    <h4>Click the "Webcam View" button</h4>
+                </div>
+-->
+                <button onclick="disapear()" type="button" class="btn btn-primary dropdown-toggle" aria-haspopup="true" aria-expanded="false" id="complicated">
+                    File Upload -
+                </button>
+                <div class="dropdown-menu" id="dropdown">
+                    <center>
+                        <div id="hover" class="dropdown-item" onclick="webcam()" style="cursor: pointer">
+                            <a>Webcam</a><br>
+                        </div>
+                        <div id="hover1" class="dropdown-item" onclick="files();" style="cursor: pointer"><a>Files</a></div>
+                    </center>
+                </div>
+            </div>
+            <div id="camera1">
+                <br>
+                <img id="output" class="smol" src="ye%20boiiiiiiiiii.webp">
+                <br> <label>Select image:</label>
+                <center>
+                    <div id="stop it"> <input id="no" type="file" accept="image/*" onchange="loadFile(event)"></div>
+                    <script>
+
+                    </script>
+                </center>
+
+            </div>
+            <div id="identify">
+                <button onclick="identify()" class="btn btn-info" disabled>Identify</button>
+            </div>
+        </div>
+    </center>
+    <div id="result_div">
+        <center>
+            <div id="guess">
+                <h1 id="warning" style="color: red"></h1>
+                <div id="extra">
+                </div>
+                <div>
+                    <h4 style="font-weight: bold;">Wolfram Project - <span id="wolfram" style="font-weight:normal!important;"></span></h4>
+                    <h4 style="font-weight: bold;">Mobilenet Model - <span id="mobilenet" style="font-weight:normal!important;"></span></h4>
+                </div>
+            </div>
+        </center>
+    </div>
+    <div id="results">
+        <div id="test1">
+            <h1>1. </h1>
+            <img src="blackbird%20european.jpg">
+            <div class="guess">
+                <h4 style="font-weight: bold;">Wolfram Project - <span style="font-weight:normal!important;">European blackbird</span></h4>
+                <h4 style="font-weight: bold;">Mobilenet Model - <span style="font-weight:normal!important;">Quail</span></h4>
+                <h3><span class="shat">Wolfram</span> is more accurate.</h3>
+            </div>
+        </div>
+    </div>
+    <div id="results">
+        <div id="test1">
+            <h1>2. </h1>
+            <img src="eiffel%20wtf.jpg">
+            <div class="guess">
+                <h4 style="font-weight: bold;">Wolfram Project - <span style="font-weight:normal!important;">Tower</span></h4>
+                <h4 style="font-weight: bold;">Mobilenet Model - <span style="font-weight:normal!important;">Drilling Platform, Offshore Rig</span></h4>
+                <h3><span class="shat">Wolfram</span> is more accurate.</h3>
+            </div>
+        </div>
+                <div id="test1" >
+            <h1>3. </h1>
+            <img src="skrt%20skrt%20mthfcker.jpg">
+            <div class="guess">
+                <h4 style="font-weight: bold;">Wolfram Project - <span style="font-weight:normal!important;">Coupe</span></h4>
+                <h4 style="font-weight: bold;">Mobilenet Model - <span style="font-weight:normal!important;">Sports Car</span></h4>
+                <h3><span class="shat">Mobilenet</span> is more accurate.</h3>
+            </div>
+        </div>
+        <div id="test1">
+            <h1>4. </h1>
+            <img src="red%20of%20the%20wood.jpg">
+            <div class="guess">
+                <h4 style="font-weight: bold;">Wolfram Project - <span style="font-weight:normal!important;">Pine</span></h4>
+                <h4 style="font-weight: bold;">Mobilenet Model - <span style="font-weight:normal!important;">Prayer Rug, Prayer Mat</span></h4>
+                <h3><span class="shat">Wolfram</span> is more accurate.</h3>
+            </div>
+        </div>
+                <div id="test1" >
+            <h1>5. </h1>
+            <img src="unprotexted%20seeee.jpg">
+            <div class="guess">
+                <h4 style="font-weight: bold;">Wolfram Project - <span style="font-weight:normal!important;">Settee</span></h4>
+                <h4 style="font-weight: bold;">Mobilenet Model - <span style="font-weight:normal!important;">Studio Couch, Day Bed</span></h4>
+                <h3><span class="shat">Mobilenet</span> is more accurate.</h3>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
